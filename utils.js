@@ -7,7 +7,6 @@ function Utils(){
     return new Promise(function(resolve, reject){
       var cat = key +":"+secret;
       var credentials = new Buffer(cat).toString('base64');
-      console.log(credentials);
       var headers= {
           "Authorization": "Basic " + credentials,
           "Content-Type":"application/x-www-form-urlencoded;charset=UTF-8"
@@ -27,7 +26,6 @@ function Utils(){
         response.on('end', function () {
           var tmp = JSON.parse(str);
           token = tmp.access_token;
-          console.log(token);
           resolve(token);
         });
 
