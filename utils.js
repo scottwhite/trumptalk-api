@@ -42,7 +42,7 @@ function Utils(){
         headers: headers,
         method: 'GET',
         hostname:'api.twitter.com',
-        path: '/1.1/search/tweets.json?q=trump&result_type=mixed&count=20'
+        path: '/1.1/search/tweets.json?q=' + search + '&result_type=mixed&count=20'
       }, function(response){
         var str = '';
         response.on('error',function(e){reject(e)});
@@ -57,7 +57,7 @@ function Utils(){
           }catch(e){
             reject(e);
           }
-          
+
         });
       });
       request.end();
