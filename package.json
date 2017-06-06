@@ -6,9 +6,7 @@
   "license": "MIT",
   "dependencies": {},
   "scripts": {
-    "start": "node main.js",
-    "build": "webpack -p --config webpack.config.js",
-    "test": "react-scripts test --env=jsdom"
+    "start": "node main.js"
   },
   "devDependencies": {}
 }
